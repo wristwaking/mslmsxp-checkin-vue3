@@ -16,8 +16,8 @@
                 </div>
 
                 <div class="main-content-menu">
-                    <a class="main-content-menu-button" href='https://m.tb.cn/h.66aHPf6sTfBqo8n' style="background-color: #E33F31;">咕咕督学淘宝店铺</a>
-                    <a class="main-content-menu-button" href='https://work.weixin.qq.com/kfid/kfcac1a16f5cf9e4809' style="background-color: #4ed786" @click="LoginServer">微信客服详细咨询</a>
+                    <a class="main-content-menu-button" target="_blank" href='https://m.tb.cn/h.66aHPf6sTfBqo8n' style="background-color: #E33F31;">咕咕督学淘宝店铺</a>
+                    <a class="main-content-menu-button" target="_blank" href='https://work.weixin.qq.com/kfid/kfcac1a16f5cf9e4809' style="background-color: #4ed786" @click="LoginServer">微信客服详细咨询</a>
                 </div>
             </div>
 

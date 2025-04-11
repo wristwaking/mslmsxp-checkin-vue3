@@ -25,6 +25,12 @@ let Api = {
     },
     getRegisterCode(params) {
         return api.post('/admin/register/mail/code', params)
+    },
+    createActivationData(params) {
+        return api.post('/admin/activation/create', params)
+    },
+    selectActivationData(params) {
+        return api.post('/admin/activation/page', params)
     }
 }
 

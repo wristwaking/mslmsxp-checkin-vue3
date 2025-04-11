@@ -42,7 +42,8 @@ export default {
             Api.adminLogin(this.form).then(res => {
                 if (res.data.code == 200) {
                     ElMessage({message: res.data.message, type: 'success'});
-                    sessionStorage.setItem("adminInfo", JSON.stringify(res.data.data))
+                    sessionStorage.setItem("adminInfo", JSON.stringify(res.data.data.admin))
+                    this.$router.replace("/manage/activation")
                 } else {
                     ElMessage({message: res.data.message, type: 'error'});
                 }

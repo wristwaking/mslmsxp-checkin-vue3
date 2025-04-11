@@ -4,6 +4,7 @@ import Index from '@/pages/Index.vue'
 import AdminLogin from '@/pages/AdminLogin.vue'
 import AdminRegister from '@/pages/AdminRegister.vue'
 import Mobile from '@/pages/Mobile.vue'
+import ActivationManage from '@/pages/ActivationManage.vue'
 const routes = [
     {
         path: "/",
@@ -20,6 +21,10 @@ const routes = [
     {
         path: "/mobile",
         component: Mobile
+    },
+    {
+        path: "/manage/activation",
+        component: ActivationManage
     }
 ]
 
@@ -38,7 +43,7 @@ router.beforeEach((to, from, next) => {
         next({ path: '/' });
     } else {
         if (to.path.startsWith('/manage')) {
-            if (!sessionStorage.getItem('license')) {
+            if (!sessionStorage.getItem('adminInfo')) {
                 next('/login');
             } else {
                 next();
@@ -46,6 +51,7 @@ router.beforeEach((to, from, next) => {
         } else {
             next();
         }
+        next();
     }
 });
 
